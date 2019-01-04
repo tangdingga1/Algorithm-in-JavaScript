@@ -1,3 +1,4 @@
+//检测是否属于某个基本类型，如果是，返回true
 const testType = {
 
     testBoolean  : val => typeof val === 'boolean',
@@ -21,10 +22,6 @@ const testType = {
 
 
 
-
-
-
-
-module.export = {
+module.exports = {
     testType
 }
