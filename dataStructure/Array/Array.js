@@ -1,6 +1,4 @@
-const {testType} = require('../../../Tools/Tools.js');
-
-
+const { testType } = require('../../tools');
 /**
  * 实现类C数组效果：
  * 特征1.存储一组具有相同类型的数据
@@ -18,10 +16,9 @@ const {testType} = require('../../../Tools/Tools.js');
 function ArrayLkieC(dataType, length, ...valArr) {
 
     //检测是否使用new 关键字来试用函数
-    if(new.target === undefined) {
+    if (new.target === undefined) {
         throw new Error('you should use new to init this function');
     }
-
     this.dataType = dataType;
     this.length = length;
     this.initValArr = valArr;
@@ -88,7 +85,6 @@ ArrayLkieC.prototype.addVal = function (idx, val) {
     if(this.test(val)) {
         //判断数组是否越界
         this.crossLineTest();
-
         // 添加进数组,如果数组当前为空，直接设置值，否则把每一项往后移动1
         if (!this.array_lkie_c[idx]) {
             this.array_lkie_c[idx] = val;
@@ -96,11 +92,9 @@ ArrayLkieC.prototype.addVal = function (idx, val) {
             this.array_lkie_c = this.array_lkie_c.slice(0, idx).concat([val], this.array_lkie_c.slice(idx));
             this.array_lkie_c.splice(this.array_lkie_c.findIndex(item => !item), 1);
         }
-
         //增加数组的length
         this.operaLength++;
         this.operateFinshConsole('addVal');
-
     } else {
         this.consoleTypeWrong();
     }
@@ -123,6 +117,5 @@ ArrayLkieC.prototype.changeVal = function(idx, val) {
         this.consoleTypeWrong();
     }
 }
-
 
 module.exports = ArrayLkieC;

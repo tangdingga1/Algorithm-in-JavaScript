@@ -1,5 +1,5 @@
 
-const getStyleConsoleString = require('./console');
+const getStyleConsoleString = require('./consoleColor');
 
 // 计算函数运算时间的方法,用来计算执行时间
 /**
@@ -11,16 +11,15 @@ const getStyleConsoleString = require('./console');
 function timeDecorator(countFunction, functionArguments) {
     const startTime = new Date().getTime();
     console.log(getStyleConsoleString({
-        cyan: 'function start ',
-        grey: ' you int ',
-        cyanBG: functionArguments,
+        yellowBG: '==========function start==========\n',
+        grey: ' you int \n',
+        magenta: functionArguments + '\n',
     }));
     const result = countFunction.apply(this, functionArguments);
     console.log(getStyleConsoleString({
-        cyan: 'function finsh in ',
-        blueBG: new Date().getTime() - startTime + 'ms ',
-        grey: ' you got ',
-        cyanBG: result,
+        yellowBG: '==========function finsh in ' + (new Date().getTime() - startTime) + 'ms ==========\n',
+        grey: ' you got \n',
+        magenta: result,
     }));
 }
 

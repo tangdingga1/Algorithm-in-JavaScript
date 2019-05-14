@@ -1,9 +1,11 @@
 const testType = require('./type');
 const countTime = require('./countTime');
-const console = require('./console');
+const consoleColor = require('./consoleColor');
+const formArrary = require('./formArrary');
 
 module.exports = {
     testType,
     countTime,
-    console,
+    consoleColor,
+    formArrary,
 }

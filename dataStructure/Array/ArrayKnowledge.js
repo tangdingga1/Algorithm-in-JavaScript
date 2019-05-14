@@ -1,6 +1,4 @@
-const ArrayLkieC = require('./ArrayLkieC.js');
-
-
+const ArrayLkieC = require('./Arrary.js');
 
 /**
  * #数组
