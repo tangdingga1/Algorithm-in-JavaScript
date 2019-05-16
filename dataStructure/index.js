@@ -1,7 +1,7 @@
-const Arrary = require('./Array/Array');
+const Array = require('./Array/Array');
 
 
 
 module.exports = {
-    Arrary,
+    Array,
 }

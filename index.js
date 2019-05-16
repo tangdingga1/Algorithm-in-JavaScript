@@ -1,29 +1,27 @@
 // 入口文件，可以简单的用 node 方式去执行算法
 
-// dataStructure
-const {
-    Arrary,
-} = require('./dataStructure');
-
-
-// sortingAlgorithm
-
-const {
-    bubbleSort,
-    bubbleSortFunctionWay,
-} = require('./sortingAlgorithm');
-
-
-
 // runtime tools
 const {
     testType,
     countTime,
     consoleColor,
-    formArrary,
+    formArray,
 } = require('./tools');
 
+// dataStructure
+const {
+    Array,
+} = require('./dataStructure');
+
+// sortingAlgorithm
+const {
+    bubbleSort,
+    bubbleSortFunctionWay,
+    selectionSort,
+    quickSortBase,
+    quickSortInPlace,
+} = require('./sortingAlgorithm');
 
 
 // you can run here
-countTime(bubbleSort, [formArrary(100)]);
+countTime(selectionSort, [formArray(10)]);
